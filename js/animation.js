@@ -1,5 +1,3 @@
-// js/animation.js
-
 // Dark/Light Mode Switch
 const modeSwitch = document.getElementById('modeSwitch');
 const logo = document.getElementById('logo');
@@ -22,8 +20,6 @@ window.addEventListener('DOMContentLoaded', () => {
   setMode(dark);
   if (modeSwitch) modeSwitch.checked = dark;
 });
-
-// Hamburger Menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 if (hamburger) {
