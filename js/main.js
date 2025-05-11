@@ -1,7 +1,5 @@
-// main.js
 import { buildData, playstyleProfiles } from './data.js';
 
-// --- Dark/Light Mode Switch ---
 const modeSwitch = document.getElementById('modeSwitch');
 const logo = document.getElementById('logo');
 const favicon = document.getElementById('favicon');
@@ -24,7 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
   if (modeSwitch) modeSwitch.checked = dark;
 });
 
-// --- Hamburger Menu ---
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 if (hamburger) {
@@ -41,7 +38,6 @@ if (hamburger) {
   });
 }
 
-// --- Fade-in on Scroll ---
 function handleFadeIn() {
   document.querySelectorAll('.fade-in').forEach(el => {
     const rect = el.getBoundingClientRect();
@@ -53,7 +49,6 @@ function handleFadeIn() {
 window.addEventListener('scroll', handleFadeIn);
 window.addEventListener('DOMContentLoaded', handleFadeIn);
 
-// --- Visual Select ---
 function renderVisualSelect(container, options, selected, locked, onSelect, multi=false, max=3) {
     container.innerHTML = '';
     options.forEach(opt => {
@@ -62,7 +57,6 @@ function renderVisualSelect(container, options, selected, locked, onSelect, mult
       tile.className = 'visual-tile' + (isSelected ? ' selected' : '') + (locked ? ' locked' : '');
       tile.tabIndex = 0;
   
-      // Frame for the image
       const imgFrame = document.createElement('div');
       imgFrame.className = 'visual-tile-img-frame';
   
@@ -87,8 +81,6 @@ function renderVisualSelect(container, options, selected, locked, onSelect, mult
     });
   }
   
-
-// --- Calculator Logic ---
 window.addEventListener('DOMContentLoaded', function() {
   const classVisualSelect = document.getElementById('classVisualSelect');
   const specVisualSelect = document.getElementById('specVisualSelect');
@@ -101,16 +93,12 @@ window.addEventListener('DOMContentLoaded', function() {
   const lockWeapon = document.getElementById('lockWeapon');
   const lockGadgets = document.getElementById('lockGadgets');
   const lockPlaystyle = document.getElementById('lockPlaystyle');
-
-  // Default: Heavy selected
   let selectedClass = 'heavy';
   let selectedSpec = '';
   let selectedWeapon = '';
   let selectedGadgets = [];
   let selectedPlaystyle = '';
-
   function updateVisuals(resetFields = false) {
-    // Class selection
     renderVisualSelect(classVisualSelect, [
       { name: 'Light', image: buildData.light.image },
       { name: 'Medium', image: buildData.medium.image },
@@ -168,11 +156,7 @@ window.addEventListener('DOMContentLoaded', function() {
   [lockClass, lockSpec, lockWeapon, lockGadgets, lockPlaystyle].forEach(lock => {
     if (lock) lock.addEventListener('change', () => updateVisuals());
   });
-
-  // Initial render
   updateVisuals(true);
-
-  // Calculator Recommendation Logic
   const calcForm = document.getElementById('buildCalculator');
   const calcResult = document.getElementById('calcResult');
   if (calcForm) {
@@ -197,8 +181,6 @@ window.addEventListener('DOMContentLoaded', function() {
         calcResult.innerHTML = "Please fill out all fields and select exactly 3 gadgets.";
         return;
       }
-
-      // Score the current loadout and compare to playstyle profiles
       function getStats(obj) { return obj ? obj.stats : { damage:0, cc:0, defense:0, support:0, movement:0 }; }
       const data = buildData[cls];
       const specObj = data.specializations.find(s => s.name === spec);
@@ -208,8 +190,6 @@ window.addEventListener('DOMContentLoaded', function() {
       [getStats(specObj), getStats(weaponObj), ...gadgetObjs.map(getStats)].forEach(statObj => {
         Object.keys(totalStats).forEach(k => totalStats[k] += statObj[k]);
       });
-
-      // Find best-fit playstyle for this loadout
       let bestFit = '';
       let bestScore = -Infinity;
       Object.entries(playstyleProfiles).forEach(([ps, weights]) => {
@@ -222,14 +202,10 @@ window.addEventListener('DOMContentLoaded', function() {
           bestFit = ps;
         }
       });
-
-      // If all fields are locked, just suggest playstyle
       if (Object.values(locked).every(Boolean)) {
         calcResult.innerHTML = `<b>Your loadout best fits the <span style="color:var(--accent-dark)">${bestFit.charAt(0).toUpperCase()+bestFit.slice(1)}</span> playstyle.</b>`;
         return;
       }
-
-      // For each unlocked field, suggest the best improvement
       let suggestion = "";
 
       function suggestBest(field, current, pool, lockedGadgetsArr=[]) {
