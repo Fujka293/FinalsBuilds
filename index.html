@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinalsBuilds – Optimize Your The Finals Builds</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo-light.png" id="favicon" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo-light.png" alt="FinalsBuilds Logo" id="logo" />
+        <span class="logo-text">FinalsBuilds</span>
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="builds.html">Builds</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Dark/Light Mode Switch -->
+  <div class="mode-switch-container">
+    <label class="mode-switch-toggle">
+      <input type="checkbox" id="modeSwitch" aria-label="Toggle dark mode" />
+      <span class="slider">
+        <span class="icon sun">&#9728;</span>
+        <span class="icon moon">&#9790;</span>
+      </span>
+    </label>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Optimize Your <span class="highlight">The Finals</span> Builds</h1>
+        <p>
+          FinalsBuilds is your interactive guide to mastering builds in The Finals. Whether you're a beginner or a seasoned competitor, discover tips, strategies, and a smart build calculator tailored to your playstyle.
+        </p>
+        <a href="builds.html" class="cta-btn">See Builds</a>
+      </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="content-section fade-in" id="tips">
+      <h2>Tips & Guides</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>Beginner</h3>
+          <ul>
+            <li>Understand class roles and their strengths.</li>
+            <li>Start with balanced builds to learn game flow.</li>
+            <li>Experiment with gadgets in the training area.</li>
+          </ul>
+        </div>
+        <div class="tip-card">
+          <h3>Intermediate</h3>
+          <ul>
+            <li>Adapt your build to the map and team composition.</li>
+            <li>Master movement and positioning for your class.</li>
+            <li>Utilize synergy between gadgets and weapons.</li>
+          </ul>
+        </div>
+        <div class="tip-card">
+          <h3>Advanced</h3>
+          <ul>
+            <li>Optimize loadouts for specific strategies (e.g., flanking, support).</li>
+            <li>Coordinate builds for maximum team efficiency.</li>
+            <li>Analyze enemy builds and counter-pick effectively.</li>
+          </ul>
+        </div>
+      </div>
+      <a href="tips.html" class="cta-btn secondary">See All Tips</a>
+    </section>
+
+    <!-- Builds Section -->
+    <section class="content-section fade-in" id="builds">
+      <h2>Builds Overview</h2>
+      <div class="builds-categories">
+        <div class="build-category">
+          <img src="assets/light-class.png" alt="Light Class" />
+          <h3>Light</h3>
+          <p>High mobility, stealth, and flanking. Ideal for aggressive or recon playstyles.</p>
+          <a href="builds.html#light" class="show-all-btn">Show All</a>
+        </div>
+        <div class="build-category">
+          <img src="assets/medium-class.png" alt="Medium Class" />
+          <h3>Medium</h3>
+          <p>Versatile, balanced between offense and support. Great for adaptive strategies.</p>
+          <a href="builds.html#medium" class="show-all-btn">Show All</a>
+        </div>
+        <div class="build-category">
+          <img src="assets/heavy-class.png" alt="Heavy Class" />
+          <h3>Heavy</h3>
+          <p>Tanky, defensive, and crowd-control. Suited for holding objectives and frontline.</p>
+          <a href="builds.html#heavy" class="show-all-btn">Show All</a>
+        </div>
+      </div>
+      <a href="builds.html" class="cta-btn secondary">Explore All Builds</a>
+    </section>
+
+    <!-- Build Calculator Section -->
+    <section class="content-section fade-in" id="calculator">
+      <h2>Build Calculator</h2>
+      <p>
+        Not sure what to play? Use our build calculator to get a personalized recommendation based on your preferred class, weapons, gadgets, and playstyle.
+      </p>
+      <a href="calculator.html" class="cta-btn secondary">Open Calculator</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="content-section fade-in" id="about">
+      <h2>About the Project</h2>
+      <div class="about-content">
+        <p>
+          FinalsBuilds is a fan-made project designed to help players of The Finals optimize their gameplay through interactive tools, guides, and community-driven insights.
+        </p>
+        <a href="about.html" class="cta-btn secondary">Read More</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="#hero">Home</a>
+      <a href="tips.html">Tips</a>
+      <a href="builds.html">Builds</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="footer-info">
+      <span>&copy; 2025 FinalsBuilds. Not affiliated with Embark Studios.</span>
+    </div>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

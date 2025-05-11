@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – FinalsBuilds</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo-light.png" id="favicon" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo-light.png" alt="FinalsBuilds Logo" id="logo" />
+        <span class="logo-text">FinalsBuilds</span>
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="builds.html">Builds</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+  <div class="mode-switch-container">
+    <label class="mode-switch-toggle">
+      <input type="checkbox" id="modeSwitch" aria-label="Toggle dark mode" />
+      <span class="slider">
+        <span class="icon sun">&#9728;</span>
+        <span class="icon moon">&#9790;</span>
+      </span>
+    </label>
+  </div>
+  <div class="wrapper">
+    <main>
+      <section class="content-section fade-in">
+        <h2>About FinalsBuilds</h2>
+        <div class="about-content">
+          <p>
+            <strong>FinalsBuilds</strong> is a fan-made project designed to help players of <b>The Finals</b> optimize their gameplay through interactive tools, guides, and community-driven insights. 
+            <br><br>
+            The site is not affiliated with Embark Studios or Nexon. All trademarks and images are property of their respective owners.
+          </p>
+        </div>
+
+        <hr style="margin:2.5em 0 2em 0; opacity:.2;">
+
+        <section>
+          <h2 style="margin-bottom:0.7em;">Changelog</h2>
+          <div class="changelog" style="font-size:1.05em;">
+            <h3>[1.5.8] – 2025-05-10</h3>
+            <ul>
+              <li><b>Changed:</b> Made visual tile label text and images smaller for better fit on all screens. <span style="color:#888;">(0.5h)</span></li>
+              <li><b>Changed:</b> Reduced gap between rows in calculator for a more compact layout. <span style="color:#888;">(0.5h)</span></li>
+            </ul>
+            <h3>[1.5.7] – 2025-05-09</h3>
+            <ul>
+              <li><b>Added:</b> CSS reset for cross-browser consistency. <span style="color:#888;">(1h)</span></li>
+              <li><b>Changed:</b> Cleaned up and deduplicated CSS, improved maintainability. <span style="color:#888;">(1h)</span></li>
+            </ul>
+            <h3>[1.5.6] – 2025-05-08</h3>
+            <ul>
+              <li><b>Changed:</b> Made calculator container wider and more responsive. <span style="color:#888;">(1h)</span></li>
+              <li><b>Fixed:</b> Fixed excessive gap below visual selection rows. <span style="color:#888;">(0.5h)</span></li>
+            </ul>
+            <h3>[1.5.5] – 2025-05-07</h3>
+            <ul>
+              <li><b>Changed:</b> Footer and navigation improvements for sticky and mobile layouts. <span style="color:#888;">(0.5h)</span></li>
+              <li><b>Changed:</b> Improved mobile scaling for visual tiles and labels. <span style="color:#888;">(0.5h)</span></li>
+            </ul>
+            <h3>[1.5.4] – 2025-05-06</h3>
+            <ul>
+              <li><b>Added:</b> Modular JavaScript structure (<code>main.js</code>, <code>data.js</code>) for maintainability. <span style="color:#888;">(1h)</span></li>
+            </ul>
+            <h3>[1.5.3] – 2025-05-05</h3>
+            <ul>
+              <li><b>Changed:</b> Improved accessibility for all interactive elements. <span style="color:#888;">(0.5h)</span></li>
+              <li><b>Changed:</b> Visual selection for gadgets now supports up to three choices with a counter. <span style="color:#888;">(0.5h)</span></li>
+            </ul>
+            <h3>[1.5.2] – 2025-05-03</h3>
+            <ul>
+              <li><b>Added:</b> Locking mechanism for all fields in the calculator. <span style="color:#888;">(1h)</span></li>
+              <li><b>Added:</b> Playstyle fit suggestions when all fields are locked. <span style="color:#888;">(0.5h)</span></li>
+            </ul>
+            <h3>[1.5.1] – 2025-05-01</h3>
+            <ul>
+              <li><b>Added:</b> Visual tile selection for class, specializations, weapons, and gadgets, with improved image scaling and compact layout. <span style="color:#888;">(1.5h)</span></li>
+              <li><b>Changed:</b> Further reduced visual tile and label size for better fit on all screens. <span style="color:#888;">(0.5h)</span></li>
+            </ul>
+            <h3>[1.5.0] – 2025-04-29</h3>
+            <ul>
+              <li><b>Fixed:</b> Bug where options would not render if no class was selected by default. <span style="color:#888;">(0.5h)</span></li>
+              <li><b>Fixed:</b> Issue with gadget selection not updating on class change. <span style="color:#888;">(0.5h)</span></li>
+            </ul>
+            <h3>[1.4.4] – 2025-04-24</h3>
+            <ul>
+              <li><b>Added:</b> Advanced build suggestion logic: now considers metrics like damage, CC, defense, support, and movement. <span style="color:#888;">(2h)</span></li>
+            </ul>
+            <h3>[1.4.3] – 2025-04-20</h3>
+            <ul>
+              <li><b>Added:</b> Modular data structure for all classes, weapons, gadgets, and specializations. <span style="color:#888;">(2h)</span></li>
+            </ul>
+            <h3>[1.4.2] – 2025-04-16</h3>
+            <ul>
+              <li><b>Added:</b> Detailed metrics for each item (DPS, utility, cooldown, etc.). <span style="color:#888;">(1.5h)</span></li>
+            </ul>
+            <h3>[1.4.1] – 2025-04-13</h3>
+            <ul>
+              <li><b>Changed:</b> Improved homepage and navigation for easier access to all sections. <span style="color:#888;">(1h)</span></li>
+              <li><b>Changed:</b> Updated class overview images and labels for clarity. <span style="color:#888;">(0.5h)</span></li>
+            </ul>
+            <h3>[1.4.0] – 2025-04-10</h3>
+            <ul>
+              <li><b>Added:</b> Expanded calculator to support Light, Medium, and Heavy classes with unique options. <span style="color:#888;">(1.5h)</span></li>
+            </ul>
+            <h3>[1.3.4] – 2025-04-06</h3>
+            <ul>
+              <li><b>Added:</b> Dark/light mode toggle as a floating switch on all pages. <span style="color:#888;">(1h)</span></li>
+            </ul>
+            <h3>[1.3.3] – 2025-04-03</h3>
+            <ul>
+              <li><b>Added:</b> Sticky footer for all layouts. <span style="color:#888;">(0.5h)</span></li>
+              <li><b>Added:</b> Fade-in animations for main content sections. <span style="color:#888;">(0.5h)</span></li>
+            </ul>
+            <h3>[1.3.2] – 2025-03-31</h3>
+            <ul>
+              <li><b>Changed:</b> Refined CSS for better spacing and modern look. <span style="color:#888;">(1h)</span></li>
+              <li><b>Changed:</b> Improved mobile responsiveness for all major sections. <span style="color:#888;">(1h)</span></li>
+            </ul>
+            <h3>[1.3.1] – 2025-03-28</h3>
+            <ul>
+              <li><b>Added:</b> Sample builds for each class. <span style="color:#888;">(1h)</span></li>
+            </ul>
+            <h3>[1.3.0] – 2025-03-25</h3>
+            <ul>
+              <li><b>Added:</b> Homepage, builds, tips, and about pages with navigation. <span style="color:#888;">(1h)</span></li>
+            </ul>
+            <h3>[1.2.2] – 2025-03-22</h3>
+            <ul>
+              <li><b>Changed:</b> Improved overall color scheme to red/white/black for better brand consistency. <span style="color:#888;">(1h)</span></li>
+            </ul>
+            <h3>[1.2.1] – 2025-03-18</h3>
+            <ul>
+              <li><b>Added:</b> Initial build calculator with dropdowns for class, weapon, gadget, and playstyle. <span style="color:#888;">(2h)</span></li>
+            </ul>
+            <h3>[1.2.0] – 2025-03-15</h3>
+            <ul>
+              <li><b>Added:</b> Project launched: basic site structure, homepage, and navigation. <span style="color:#888;">(2h)</span></li>
+              <li><b>Added:</b> Initial tips and builds pages. <span style="color:#888;">(1h)</span></li>
+              <li><b>Added:</b> Basic CSS and layout. <span style="color:#888;">(1h)</span></li>
+            </ul>
+          </div>
+          <p style="margin-top:1em;"><b>Total time spent: 54 hours</b></p>
+        </section>
+
+        <hr style="margin:2.5em 0 2em 0; opacity:.2;">
+
+        <section>
+          <h2>Inspirations &amp; Sources</h2>
+          <p>FinalsBuilds draws inspiration from a variety of sources to create a modern, user-friendly, and visually appealing experience for players of The Finals.</p>
+          <ul>
+            <li><strong>Stefano DeRosa's Portfolio:</strong> Modern design principles, clean layouts, and interactive UI elements.</li>
+            <li><strong>Gaming Websites:</strong> Sites like Fall Guys, Apex Legends, and Valorant for dynamic animations and responsive design.</li>
+            <li><strong>Community Wikis and Official Game Resources:</strong> For accurate and up-to-date information on weapons, gadgets, and gameplay mechanics.</li>
+            <li><strong>Open Source Projects:</strong> Leveraging best practices in web development and accessibility.</li>
+            <li><strong>Design Tools:</strong> Canva, Figma, and Adobe XD for prototyping and visual design.</li>
+          </ul>
+          <p>All game assets and trademarks belong to their respective owners. FinalsBuilds is a fan project and is not affiliated with Embark Studios or Nexon.</p>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-nav">
+        <a href="index.html#hero">Home</a>
+        <a href="tips.html">Tips</a>
+        <a href="builds.html">Builds</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-info">
+        <span>&copy; 2025 FinalsBuilds. Not affiliated with Embark Studios.</span>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Build Calculator – FinalsBuilds</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo-light.png" id="favicon" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo-light.png" alt="FinalsBuilds Logo" id="logo" />
+        <span class="logo-text">FinalsBuilds</span>
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="builds.html">Builds</a></li>
+        <li><a href="calculator.html" class="active">Calculator</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+  <div class="mode-switch-container">
+    <label class="mode-switch-toggle">
+      <input type="checkbox" id="modeSwitch" aria-label="Toggle dark mode" />
+      <span class="slider">
+        <span class="icon sun">&#9728;</span>
+        <span class="icon moon">&#9790;</span>
+      </span>
+    </label>
+  </div>
+  <div class="wrapper">
+    <main>
+      <section class="content-section fade-in">
+        <h2>Build Calculator</h2>
+        <form id="buildCalculator" autocomplete="off">
+          <div class="visual-select-row">
+            <div class="visual-select-group">
+              <label>Class:</label>
+              <div id="classVisualSelect" class="visual-select"></div>
+              <label class="lock-checkbox"><input type="checkbox" id="lockClass" />🔒</label>
+            </div>
+            <div class="visual-select-group">
+              <label>Specialization:</label>
+              <div id="specVisualSelect" class="visual-select"></div>
+              <label class="lock-checkbox"><input type="checkbox" id="lockSpec" />🔒</label>
+            </div>
+            <div class="visual-select-group">
+              <label>Weapon:</label>
+              <div id="weaponVisualSelect" class="visual-select"></div>
+              <label class="lock-checkbox"><input type="checkbox" id="lockWeapon" />🔒</label>
+            </div>
+          </div>
+          <div class="visual-select-row">
+            <div class="visual-select-group" style="flex:2;">
+              <label>
+                Gadgets (<span id="gadgetCount">0</span>/3):
+              </label>
+              <div id="gadgetVisualSelect" class="visual-select visual-select-multiselect"></div>
+              <label class="lock-checkbox"><input type="checkbox" id="lockGadgets" />🔒</label>
+            </div>
+            <div class="visual-select-group" style="flex:1;">
+              <label>Playstyle:</label>
+              <select id="playstyleSelect" required>
+                <option value="">Select</option>
+                <option value="flanker">Flanker</option>
+                <option value="stealth">Stealth</option>
+                <option value="recon">Recon</option>
+                <option value="support">Support</option>
+                <option value="anchor">Anchor</option>
+                <option value="disruptor">Disruptor</option>
+                <option value="objective">Objective Specialist</option>
+                <option value="area">Area Denial</option>
+                <option value="versatile">Versatile</option>
+              </select>
+              <label class="lock-checkbox"><input type="checkbox" id="lockPlaystyle" />🔒</label>
+            </div>
+          </div>
+          <button type="submit" class="cta-btn">Get Suggested Build</button>
+        </form>
+        <div id="calcResult" class="calc-result"></div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-nav">
+        <a href="index.html#hero">Home</a>
+        <a href="tips.html">Tips</a>
+        <a href="builds.html">Builds</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-info">
+        <span>&copy; 2025 FinalsBuilds. Not affiliated with Embark Studios.</span>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
