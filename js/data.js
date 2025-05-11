@@ -1,4 +1,3 @@
-// data.js
 export const buildData = {
     light: {
       name: 'Light',
