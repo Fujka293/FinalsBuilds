@@ -1,4 +1,95 @@
 @import url("https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73");
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: var(--navbar-height);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+  color: var(--accent-dark);
+}
+
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.7em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.95em; }
+
+p {
+  margin: 1em 0;
+}
+
+ul, ol {
+  margin: 1em 0 1em 2em;
+  padding: 0;
+  list-style: disc inside;
+}
+
+li {
+  margin: 0.3em 0;
+  padding: 0;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+a {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em 0;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  background: #fafafa;
+  border-left: 4px solid var(--accent-dark);
+  color: #444;
+}
+
+pre, code {
+  background: #f4f4f4;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 0.98em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2em 0;
+}
 :root {
     --primary: #fff;
     --secondary: #111;
