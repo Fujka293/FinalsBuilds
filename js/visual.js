@@ -1,4 +1,3 @@
-// js/visual.js
 export function renderVisualSelect(container, options, selected, locked, onSelect, multi=false, max=3) {
     container.innerHTML = '';
     options.forEach(opt => {
