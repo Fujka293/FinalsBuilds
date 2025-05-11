@@ -1,4 +1,3 @@
-// js/calculator.js
 import { buildData, playstyleProfiles } from './data.js';
 import { renderVisualSelect } from './visual.js';
 
@@ -70,8 +69,6 @@ export function setupCalculator() {
     if (lock) lock.addEventListener('change', updateVisuals);
   });
   updateVisuals();
-
-  // Recommendation logic
   const calcForm = document.getElementById('buildCalculator');
   const calcResult = document.getElementById('calcResult');
   if (calcForm) {
@@ -100,7 +97,6 @@ export function setupCalculator() {
       const weaponObj = data.weapons.find(w => w.name === weapon);
       const gadgetObjs = gadgets.map(g => data.gadgets.find(x => x.name === g));
       let totalStats = { dps:0, ttk:0, range:0, utility:0, movement:0, burst:0, sustain:0 };
-      // Aggregate metrics
       [getStats(specObj), getStats(weaponObj), ...gadgetObjs.map(getStats)].forEach(statObj => {
         Object.keys(totalStats).forEach(k => totalStats[k] += statObj[k] || 0);
       });
@@ -117,12 +113,11 @@ export function setupCalculator() {
           bestFit = ps;
         }
       });
-      // If all fields are locked, just suggest playstyle
+      // just playstyle if everything is locked
       if (Object.values(locked).every(Boolean)) {
         calcResult.innerHTML = `<b>Your loadout best fits the <span style="color:var(--accent-dark)">${bestFit.charAt(0).toUpperCase()+bestFit.slice(1)}</span> playstyle.</b>`;
         return;
       }
-      // For each unlocked field, suggest the best improvement
       let suggestion = "";
       function suggestBest(field, current, pool, lockedGadgetsArr=[]) {
         let best = current, bestScore = -Infinity;
